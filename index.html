@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>DESCONTOS | NARREAL</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="http://novofocco.com.br/narreal/favicon.ico">
+
+  <link rel="canonical" href="http://novofocco.com.br/narreal" />
+<meta property="og:title" content="DESCONTOS | NARREAL" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://novofocco.com.br/narreal" />
+<meta property="og:image" content="http://novofocco.com.br/narreal/assets/img/shared.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:site_name" content="DESCONTOS | NARREAL" />
+<meta property="og:description" content="CADASTRE-SE E SEJA UM CERVEJEIRO NA REAL | Ganhe 30% de desconto Na primeira visita e Ganhe  10% de desconto O ano todo! " />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DESCONTOS | NARREAL" />
+<meta name="twitter:description" content="CADASTRE-SE E SEJA UM CERVEJEIRO NA REAL | Ganhe 30% de desconto Na primeira visita e Ganhe  10% de desconto O ano todo!" />
+<meta name="twitter:image" content="http://novofocco.com.br/narreal/assets/img/shared.png" />
+<meta itemprop="image" content="http://novofocco.com.br/narreal/assets/img/shared.png" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<style type="text/css">
+	@font-face {
+  font-family: 'grande';
+  src: url(assets/fonts/Microbrew-Soft-Four.woff);
+}
+
+	@font-face {
+  font-family: 'texto';
+  src: url(assets/fonts/SairaCondensed-Regular.woff);
+}
+
+
+.texto-normal{font-family: 'texto';}
+.texto-grande{font-family: 'grande';}
+
+.cor-azul{color:#213645;}
+.cor-branca{color:#fff;}
+.cor-laranja{color:#ec5646;}
+
+h1{font-size: 50px; }
+h2{font-size: 40px; }
+h3{font-size: 35px;}
+h4{font-size: 25px;}
+h5{font-size: 20px;}
+h6{font-size: 15px;}
+
+.cadastro-real .form-group { position: relative; }
+.cadastro-real .form-group label{cursor: text; transition: all .3s ease; position: absolute; left: 0px; top: 0px;  font-family: 'texto'; font-size:25px;  color: #2c5572; z-index: 0; }
+.cadastro-real .form-group label.focada{ top: -10px;  font-family: 'texto'; font-size:10px;  color: #fff; }
+.cadastro-real .form-group input{ background: rgba(0,0,0,0); border: none; border-bottom: #2c5572 1px solid; color: #ec5646; font-family: 'grande'; font-size: 25px;}
+.cadastro-real .form-group .form-control:focus {box-shadow: 0 .2rem 0 rgba(255,255,255,1) !important; }
+.cadastro-real .form-group .form-control:focus label { color: #fff; }
+
+.buscaBairros{ display: none; position: absolute; background: #ec5646; width: 100%; left: 0; top: 38px; font-family: 'grande'; }
+.buscaBairros ul{ padding: 0; margin: 0; }
+.buscaBairros ul li{ list-style: none; padding: 5px 10px; border-bottom:  }
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #ec5646;
+    border-color: #ec5646;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #c64133;
+    border-color: #c64133;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 .2rem rgba(236,86,70,.5);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #c64133;
+    border-color: #c64133;
+    box-shadow: 0 0 0 .2rem rgba(236,86,70,.5);
+}
+
+
+
+.posCadastro{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #213645;
+	opacity: 1;
+	z-index: 9999;
+	display: none;
+}
+
+.posCadastro a{color: #ec5646; margin: 0 5px; }
+.posCadastro a:hover{color: #c64133;}
+
+.playVideo{cursor: pointer;}
+
+</style>
+
+<script type="text/javascript">
+	$(function(){
+
+		/// efeito campos formulario
+		$('.cadastro-real .form-group .form-control').each(function(){
+			if($(this).val().length<1){ $('.cadastro-real .form-group:eq('+$(this).parent().index()+') label').removeClass('focada'); }else{$('.cadastro-real .form-group:eq('+$(this).parent().index()+') label').addClass('focada');}
+		});
+		
+		$('.cadastro-real .form-group .form-control').focus(function(){
+			//console.log('');
+			$('.cadastro-real .form-group:eq('+$(this).parent().index()+') label').addClass('focada');
+		});
+
+		$('.cadastro-real .form-group .form-control').blur(function(){
+			if($(this).val().length<1){ $('.cadastro-real .form-group:eq('+$(this).parent().index()+') label').removeClass('focada'); }else{}
+		});
+		/// efeito campos formulario
+
+		$('#cpfReal').mask('000.000.000-00');
+		$('#nascReal').mask('00/00/0000');
+		$('#telReal').mask('(00) 00000-0000');
+
+		$('.playVideo').click(function(){
+			$(this).fadeOut('slow');
+
+			var myVideo = document.getElementById("videonarreal"); 
+			myVideo.play();
+			if (myVideo.requestFullscreen) {
+  myVideo.requestFullscreen();
+} else if (myVideo.mozRequestFullScreen) {
+  myVideo.mozRequestFullScreen();
+} else if (myVideo.webkitRequestFullscreen) {
+  myVideo.webkitRequestFullscreen();
+} else if (myVideo.msRequestFullscreen) { 
+  myVideo.msRequestFullscreen();
+}
+		});
+
+
+		//$('#bairroReal').focus
+
+
+		var obj = {};
+		var bairrosEncontrados = "";
+
+		$.getJSON('assets/bairros.php', function(result){ obj = result; 
+
+			console.log('teste bairrros');
+
+			for (var bairrosLista in result.data){
+				$('#listBairro').append('<option value="'+result.data[bairrosLista].Nome+'"></option>'); 
+			}
+
+
+
+
+			var needle = 'al';
+		//needle = '/'+needle+'/'i;
+		// iterate over each element in the array
+		
+		  // look for the entry with a matching `code` value
+		  var cont = 0;
+		 	$.each(obj.data, function(i, v) {
+		        if (v.Nome.search(new RegExp(needle, 'i')) != -1) {
+		        	if(cont<5){
+		        	bairrosEncontrados
+		            console.log(v);
+		        }
+		            cont++;
+		            return;
+		        }
+		    });
+		
+
+		   }).fail(function(error){console.log(error);});  //
+
+
+
+
+		$('.cadastro-real').submit(function(){
+
+			$('.loader').fadeIn();
+
+			
+			var dados = $(this).serialize();
+			var formthis = $(this);
+		
+		
+		function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
+
+
+function alertaCPF(){
+
+var alertaHtml = '<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>CPF inválido</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>';
+$('.alertasForm').html(alertaHtml);
+$('.loader').fadeOut();
+
+
+
+}
+
+function TestaCPF(strCPF) {
+	var strCPF = strCPF.replace('.','');
+		strCPF = strCPF.replace('.','');
+	 	strCPF = strCPF.replace('-','');
+	
+    var Soma;
+    var Resto;
+    Soma = 0;
+  if (strCPF == "00000000000") { return false;}
+
+  //strCPF = strCPF.strReplace()
+     
+  for (i=1; i<=9; i++) { Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);}
+  Resto = (Soma * 10) % 11;
+   
+    if ((Resto == 10) || (Resto == 11)){  Resto = 0;}
+    if (Resto != parseInt(strCPF.substring(9, 10)) ){ console.log(strCPF+' CPF 2'); return false;}
+   
+  Soma = 0;
+    for (i = 1; i <= 10; i++){ Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);}
+    Resto = (Soma * 10) % 11;
+   
+    if ((Resto == 10) || (Resto == 11)){  Resto = 0;}
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ){  return false;}
+
+    return true;
+}
+
+
+	var $form = $(this);
+		var firedados = getFormData($form);
+
+			//console.log(firedados);
+
+			
+			var TestCPF = TestaCPF(firedados.CPF);
+			console.log(TestCPF);
+			
+			//var firedados = {teste: 'valeu', oi: 'caralho'};
+			if(TestCPF == true){
+			
+			$.post('https://desconto-narreal.firebaseio.com/cadastro/.json',
+			JSON.stringify(firedados),
+			function(data){
+				console.log('firebase');
+				console.log(data);
+
+
+				
+				$('.posCadastro').fadeIn();
+				$('.loader').fadeOut();
+				
+				//location.assign('/reserva/final.php?unidade='+firedados.unidade_res+'&final='+data.name);
+			
+							
+			}).fail(
+				function(data){
+				console.log('error firebase');
+				console.log(dados);
+				//console.log(formthis););
+				$('.loader').fadeOut();
+
+				});
+			
+			}else{alertaCPF();}
+			
+			/////////////////////////////////////
+				
+				
+				
+			
+			
+			
+			
+			return false;
+			 
+			
+		});
+
+		
+
+
+	});
+</script>
+
+</head>
+<body>
+
+	<div class="container-fluid"  style="background-image: url(assets/img/frente1.jpg); background-size: cover; ">
+		<div class="row align-items-center" style="min-height: 100vh;">
+			<div class="col-md-6"><img src="assets/img/logo.svg"></div>
+			<div class="col-md-6 py-md-5 mb-4 "><img src="assets/img/p1.svg"></div>
+		</div>
+	</div>
+	<div class="container-fluid " style="background-image: url(assets/img/frente2.jpg); background-size: cover; ">
+		
+		<h3 class="texto-normal cor-branca text-center pt-5" >CADASTRE-SE E SEJA UM CERVEJEIRO NA REAL</h3>
+
+		<div class="row align-items-center ">
+			<div class="col-md-6 c-formulario" style="position: relative;">
+				<div class="container posCadastro">
+					<div class="row justify-content-center">
+						<div class="col-md-8">
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 207.3 158.7" style="enable-background:new 0 0 207.3 158.7;" xml:space="preserve">
+<style type="text/css">
+	.pos0{fill:#EB5646;}
+	.pos1{font-family:'grande';}
+	.pos2{font-size:31.5265px;}
+	.pos3{font-size:21.1652px;}
+	.pos4{font-size:29.6759px;}
+	.pos5{font-size:51.8852px;}
+</style>
+<text transform="matrix(0.991 -0.134 0.134 0.991 23.3266 51.6388)" class="pos0 pos1 pos2">PRONTO!</text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 7.2404 74.1687)" class="pos0 pos1 pos3">AGORA VOCÊ JÁ </text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 21.7249 99.6158)" class="pos0 pos1 pos4">é um CERVEJEIRO</text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 7.5522 141.9025)" class="pos0 pos1 pos5">Na rEAL</text>
+</svg>
+
+<h4 class="texto-normal cor-branca text-center" style="max-width: 500px; margin: 0 auto;">BASTA DAR O SEU CPF E LEVAR UM DOCUMENTO COM FOTO QUANDO VIER AO NARREAL E O SEU BENEFÍCIO ESTÁ GARANTIDO*<br>
+<small>*Benefício válido até o dia 30 de Fevereiro</small>
+</h4>
+
+<h1 class="cor-branca text-center compartilharNarreal py-4">
+	<a href="https://api.whatsapp.com/send?text=Se%20liga%20nesse%20desconto%20do%20NARREAL%20só%20se%20cadastrar%20http%3A%2F%2Fnovofocco.com.br%2Fnarreal%2F" target="_blank"><i class="fab fa-whatsapp"></i></a>
+	<a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=http%3A%2F%2Fnovofocco.com.br%2Fnarreal%2F&display=popup&ref=plugin&src=share_button" target="_blank"><i class="fab fa-facebook-square"></i></a>
+	<a href="https://twitter.com/home?status=http%3A%2F%2Fnovofocco.com.br%2Fnarreal%2F" target="_blank"><i class="fab fa-twitter"></i></a>
+</h1>
+<h6 class="texto-normal cor-laranja text-center" style="max-width: 500px; margin: 0 auto;" >-------- Compartilhe --------</h6>
+						</div>
+					</div>
+				</div>
+
+
+<svg version="1.1" id="Camada_a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 592.6 300.1" style="enable-background:new 0 0 592.6 300.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EB5646;}
+	.st1{font-family:'grande';}
+	.st2{font-size:54.2442px;}
+	.st3{letter-spacing:-4;}
+	.st4{font-size:95.1049px;}
+	.st5{letter-spacing:-7.1;}
+	.st6{font-size:51.0601px;}
+	.st7{letter-spacing:-3;}
+	.st8{fill:#FFFFFF;}
+	.st9{font-family:'texto';}
+	.st10{font-size:30.2172px;}
+	.st11{letter-spacing:-1;}
+	.st12{font-size:53.4812px;}
+	.st13{font-size:93.7672px;}
+	.st14{letter-spacing:-7;}
+	.st15{font-size:50.3419px;}
+</style>
+<text transform="matrix(0.9824 -0.1371 0.136 0.9907 30.1599 89.3437)" class="st0 st1 st2 st3">Ganhe</text>
+<text transform="matrix(0.9824 -0.1371 0.136 0.9907 22.74 167.0051)" class="st0 st1 st4 st5">30%</text>
+<text transform="matrix(0.9824 -0.1371 0.136 0.9907 52.936 203.2781)" class="st0 st1 st6 st7">de desconto</text>
+<text transform="matrix(0.9809 -0.1455 0.1473 0.9891 41.9883 233.0112)" class="st8 st9 st10 st11">Na primeira visita a ser</text>
+<text transform="matrix(0.9809 -0.1455 0.1573 0.9891 42.9883 263.0112)" class="st8 st9 st10 st11">realizada até final de Março</text>
+
+<text transform="matrix(0.991 -0.134 0.134 0.991 336.6862 68.1562)" class="st0 st1 st12 st3">Ganhe</text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 262.1763 107.0619)" class="st8 st1 st12 st3">e</text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 329.0648 144.6904)" class="st0 st1 st13 st14">10%</text>
+<text transform="matrix(0.991 -0.134 0.134 0.991 358.97 180.5424)" class="st0 st1 st15 st7">de desconto</text>
+<text transform="matrix(0.9818 -0.139 0.1407 0.99 381.592 203.3345)" class="st8 st9 st10 st11">em todo 2019.</text>
+</svg>
+
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+
+						
+
+												
+						<form class="cadastro-real py-5">
+							<div class="form-group">
+							    <label for="nomeReal" class="">Nome</label>
+							    <input type="text" class="form-control" id="nomeReal" name="Nome" aria-describedby="nomeRealhelp" required>
+							    <small id="nomeRealhelp" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							    <label for="emailReal">Email</label>
+							    <input type="email" class="form-control" id="emailReal" name="Email" aria-describedby="emailRealhelp" required>
+							    <small id="emailRealhelp" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							    <label for="telReal">Telefone</label>
+							    <input type="tel" class="form-control" id="telReal" name="Tel" aria-describedby="telRealhelp" required>
+							    <small id="telRealhelp" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							    <label for="nascReal" class="">Data de Nascimento</label>
+							    <input type="tel" class="form-control" id="nascReal" name="DataNascimento" aria-describedby="nascRealhelp" required>
+							    <small id="nascRealhelp" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							    <label for="cpfReal" class="">CPF</label>
+							    <input type="tel" class="form-control" id="cpfReal" name="CPF" aria-describedby="cpfRealhelp" required>
+							    <small id="cpfRealhelp" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							    <label for="bairroReal" class="">Bairro onde mora</label>
+							    <input list="listBairro" type="text" class="form-control" id="bairroReal" name="Bairro" aria-describedby="bairroRealhelp" required>
+				
+								<datalist id="listBairro">
+								  
+								</datalist>
+							    <small id="bairroRealhelp" class="form-text text-muted"></small>
+							    <div class="buscaBairros">
+							    	<ul>
+							    		<li data-bairro="Bairro 1"><h6>Barirro 1 <small> Rio de janeiro</small></h6></li>
+							    	</ul>
+							    </div>
+							</div>
+							<div class="loader" style="display: none; text-align: center;">
+					  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+					  <path fill="#EB5646" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+						<animateTransform attributeType="xml"
+						  attributeName="transform"
+						  type="rotate"
+						  from="0 25 25"
+						  to="360 25 25"
+						  dur="0.6s"
+						  repeatCount="indefinite"/>
+						</path>
+					  </svg>
+					</div>
+							<button type="submit" class="btn btn-primary btn-block">Efetuar Cadastro</button>
+
+							<div class="alertasForm pt-4"></div>
+						</form>
+
+
+					</div>
+				
+				</div>	
+
+			</div>
+
+			<div class="col-md-6"><svg class="d-none d-sm-block" style="margin-left: -10%;" viewBox="0 0 960 1080" xmlns="http://www.w3.org/2000/svg"> <rect width="960" height="1080" fill="rgba(0,0,0,0)" ></rect></svg></div>
+		</div>
+	</div>
+	<div class="container-fluid m-0 p-0" style="position: relative;">
+		<img class="playVideo" style="position: absolute; left: 0; top: 0; width: 100%; z-index: 99;" src="assets/img/frenteVideo.jpg" />
+		<video id="videonarreal" width="100%" controls>
+		  <source src="assets/NARREAL_apresentacao.mp4" type="video/mp4">
+		   Seu navegador não suporta esse tipo de formato.
+		</video>
+
+	</div>
+
+</body>
+</html>
